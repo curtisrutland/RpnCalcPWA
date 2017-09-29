@@ -1,0 +1,50 @@
+@mixin calcbtn($grow) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: $grow 1 0;    
+    calc-button {
+        border-top: 1px white solid;
+        border-right: 1px white solid;
+    }
+    &:last-child calc-button {
+        border-right: 0;
+    }
+}
+
+
+.calc-row-container {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+.output-row {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 0;
+}
+
+.output {
+    flex: 1 1 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px;
+    font-size: 3rem;
+}
+
+.calc-row {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 0;
+}
+
+.calc-button-1 {
+    @include calcbtn(1);
+}
+
+.calc-button-2 {
+    @include calcbtn(2);
+}
+    

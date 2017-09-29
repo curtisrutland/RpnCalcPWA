@@ -1,0 +1,9 @@
+<button class="fill" full color="dark" (click)="click()">
+    <ng-container *ngIf="isIcon">
+        <!-- {{icon[0]}} -->
+        <i class="fa fa-backward" aria-hidden="true"></i>
+    </ng-container>
+    <ng-container *ngIf="!isIcon">
+        {{text}}
+    </ng-container>
+</button>
